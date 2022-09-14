@@ -1,0 +1,30 @@
+<section>
+  <fieldset>
+    <p>ingrese foto de perfil</p>
+    <input type="url" [value]="alumnos.foto" (input)="foto($event)">
+  </fieldset>
+  <fieldset>
+    <p>Nombre del alumno</p>
+    <input type="text" name="nombreAlumno" (input)="nuevoNombre($event)">
+  </fieldset>
+  <fieldset>
+    <p>Apellido del alumno</p>
+    <input type="text" name="apellidoAlumno" (input)="nuevoApellido($event)">
+  </fieldset>
+  <fieldset>
+    <p>rut del alumno</p>
+    <input type="number" name="rutAlumno" (input)="nuevoRut($event)">
+  </fieldset>
+  <fieldset>
+    <p>edad del alumno</p>
+    <input type="number" name="edadAlumno" (input)="nuevaEdad($event)">
+  </fieldset>
+  <fieldset>
+    <p>Seleccione una seccion</p>
+    <select name="seccion" id="" (change)="cambiarOpc($event)">
+      <option  *ngFor="let x of lista" [value]="x.inicialSeccion">{{x.inicialSeccion}} </option>
+    </select>
+  </fieldset>
+
+  <button type="submit" (click)="guardar($event)">guardar</button>
+</section>

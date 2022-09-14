@@ -1,0 +1,23 @@
+<h1>Nueva Seccion</h1>
+<app-formulario-seccion (salvar2)="guardarSeccion($event)"></app-formulario-seccion>
+
+<app-listar-seccion [seccion]="listarSeccion"></app-listar-seccion>
+
+
+
+<hr>
+<br>
+
+
+
+<h1>Registro alumno</h1>
+<fieldset>
+    <p>ingrese foto de perfil</p>
+    <input type="url" [value]="imagenSeleccionada" (input)="escucharImg($event)">
+    <app-mostrar-foto [mostrarFoto]="imagenSeleccionada" ></app-mostrar-foto>
+  </fieldset>
+<app-formulario-alumnos [lista]="listarSeccion"(salvar)="guardarAlumnos($event)"></app-formulario-alumnos>
+
+<app-listar-alumnos [alumno]="listarAlumnos"></app-listar-alumnos>
+
+
